@@ -17,5 +17,4 @@ public class ScheduledTasks {
     public void reportCurrentTime() {
         logger.info("The time is now {}", dForm.format(new Date()));
     }
-    
 }
