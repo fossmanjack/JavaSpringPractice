@@ -28,6 +28,7 @@ public class ConsumingRestfulApplication {
 	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
 		return args -> {
 			Insult insult = restTemplate.getForObject("https://evilinsult.com/generate_insult.php?lang=en&type=json", Insult.class);
+			// ideally we'd check to make sure it wasn't null
 			logger.info(insult.toString());
 		};
 	}
